@@ -8,7 +8,7 @@
 - ### Technology and Tools:
   - Windows Server 2022 DNS Server
   - Windows 10 Client
-  - Microsoft Azure (Virtual Machine 
+  - Microsoft Azure (Virtual Machine Hosting)
   - DNS manager
   - PowerShell (nslookup, ipconfig) 
   - Active Directory integrated DNS
@@ -39,7 +39,11 @@
 ---
 
 ## 🔹Key Takeaways
-#### 
+- DNS translates human readable domain names into IP addresses required for network communication
+- A Records and CNAME Records serve different roles in name resolution and rescource mapping
+- DNS caching improves performance but can temporarily mask changes
+- Local DNS servers rely on root hints and external servers for internet resolution
+- Understanding DNS behavior is critical for diagnosing connectivity and access issues
 ---
 
 ## Screenshots
@@ -47,3 +51,6 @@
 ---
 
 ## 🔹Why This Project Matters
+#### This project demonstrates foundational networking knowledge required to understand how systems communicate within and outside of a network.
+#### DNS is a critical service in all IT environments, and the ability to configure, test, and troubleshoot name resolution issues is essential for all levels from Entry Level to Senior levels.
+#### This project highlights both technical configuration and analytical thinking when diagnosing network related issues.
