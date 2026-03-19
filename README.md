@@ -5,8 +5,13 @@
 ## Project Summary
 #### This project demonstrates hands on configuration and analysis of Domain Name System (DNS) services within a Windows Server environment. 
 #### Key tasks included creating and managing DNS records, analyzing name resolution behavior between client and server systems, and understanding how local DNS servers interact with external DNS infrastructure. 
-### - Technology and Tools:
-  - 
+- ### Technology and Tools:
+  - Windows Server 2022 DNS Server
+  - DNS manager
+  - PowerShell (nslookup, ipconfig)
+  - Windows 10 Client
+  - Active Directory integrated DNS
+#### This project reflects real world networking responisibilities related to name resolution, service accessibility, and basic network troubleshooting.
 ---
 
 ## Objectives
