@@ -57,7 +57,3 @@
 
 ---
 
-## 🔹Why This Project Matters
-#### This project demonstrates foundational networking knowledge required to understand how systems communicate within and outside of a network.
-#### DNS is a critical service in all IT environments, and the ability to configure, test, and troubleshoot name resolution issues is essential for all levels from Entry Level to Senior levels.
-#### This project highlights both technical configuration and analytical thinking when diagnosing network related issues.
