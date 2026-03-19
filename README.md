@@ -1,3 +1,10 @@
+![DNS](https://github.com/user-attachments/assets/2a4853a2-65cb-4a3f-8355-cf83b066d8ee)
+
+
+
+
+
+
 # DNS Configuration & Name Resolution Analysis in a Windows Server Environment
 
 ---
