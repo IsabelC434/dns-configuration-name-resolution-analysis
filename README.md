@@ -97,8 +97,9 @@
    - Checked the client DNS cache using:
      - ipconfig /displaydns
    - Identified that the client was still using a cached DNS entry
+  
  - ### Resolution
-   - Cleared the DNS cache on the client machine with ipconfig /flushdns and re-ran nslookup <hostname> 
+    - Cleared the DNS cache on the client machine with ipconfig /flushdns and re-ran nslookup <hostname> 
 ## Outcome 
 #### The hostname was resolved correctly after clearing the DNS cache.
 #### This demonstrated how DNS caching can impact name resolution and highlighted the importance of validating results from the client side when troubleshooting DNS related issues.
