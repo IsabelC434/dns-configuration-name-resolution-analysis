@@ -24,7 +24,7 @@
 
 ## 🔹Objectives
 - Configure and manage DNS records (A Records, CNAME Records)
-- Analyze Client side DNS behavior
+- Analyze client side DNS behavior
 - Observe DNS functionality and propagation effects
 - Understand how local DNS servers resolve external domain queries
 - Strengthen foundational networking and troubleshooting skills
@@ -36,8 +36,13 @@
 - Domain: isabelsdomain.com
 - DNS Type: Active Directory Integrated DNS
   #### Tools Used within environment:
-  - PowerShell: ipconfig, nslookup, ipconfig /flushdns, ipconfig /displaydns
-  - DNS Manager
+  - PowerShell:
+  - ping
+  - nslookup
+  - ipconfig
+  - ipconfig /displaydns
+  - ipconfig /flushdns
+- DNS Manager
 #### This environment simulates an internal network where the domain controller also functions as the DNS server.
 ---
 
