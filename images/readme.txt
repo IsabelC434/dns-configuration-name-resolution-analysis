@@ -10,3 +10,5 @@
 ![all](ipconfig-all.png)
 ![all](ipconfig-all2.png)
 ![lookup](nslookup-castle.png) 
+![found](still-found.png) 
+![flush](flushdns2.png)
