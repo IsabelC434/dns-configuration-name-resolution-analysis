@@ -1,6 +1,6 @@
 ![create](Castle-A-Record-Created.png) 
 ![inspect](Inspecting-DNS-Records.png)
-![found](alias-foung.png)
+![found](alias-found.png)
 ![unfound](cant-find-castle.png)
 ![ping](castle-ping.png)
 ![dns](displaydns.png)
