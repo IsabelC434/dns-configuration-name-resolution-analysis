@@ -1,1 +1,12 @@
-
+![create](Castle-A-Record-Created.png) 
+![inspect](Inspecting-DNS-Records.png)
+![found](alias-foung.png)
+![unfound](cant-find-castle.png)
+![ping](castle-ping.png)
+![dns](displaydns.png)
+![alias](eternia-alias.png)
+![ping](eternia-ping.png)
+![flush](flushdns.png)
+![all](ipconfig-all.png)
+![all](ipconfig-all2.png)
+![lookup](nslookup-castle.png) 
