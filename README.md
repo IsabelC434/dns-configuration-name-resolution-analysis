@@ -103,17 +103,16 @@
    - nslookup returned a “Non existent domain” error
    - DNS server was shown as 8.8.8.8 instead of the domain controller
  - ### Diagnosis
-   - Ran ipconfig /all to verify network configuration
-   - Identified that the client machine was using an external DNS server (8.8.8.8)
+   - Ran ipconfig /all to verify DNS configuration and identified that the client was using an external DNS server (8.8.8.8) instead of the internal domain controller. 
    - Since external DNS servers do not contain records for internal domains (such as greyskull.local), the hostname could not be resolved.
  - ### Resolution
     - Updated the client machine’s DNS settings to point to the domain controller (10.0.0.7)
     - Cleared the DNS cache using ipconfig /flushdns
 ## Outcome 
 #### Re-ran nslookup and confirmed successful resolution and The hostname correctly resolved to the internal IP address.
-#### This issue demonstrated the importance of correct DNS server configuration on client systems when resolving internal domain resources.
 
-#### Client incorrectly configured to use external DNS server
+
+#### Client incorrectly configured to use external DNS server. This failure occurred because the client machine was configured to use an external DNS server, which does not contain records for internal domains.
 <img src="images/ipconfig-all.png" width="600"/>
 
 <img src="images/flushdns.png" width="600"/>
@@ -121,6 +120,7 @@
 #### DNS server corrected to domain controller
 <img src="images/displaydns.png" width="600"/>
 
+#### This scenario demonstrates how incorrect DNS configuration on a client system can prevent resolution of internal domain resources. Since public DNS servers do not host private domain records, internal name resolution depends on proper DNS server configuration.
 ---
 ## 🔹Key Takeaways
 - DNS translates human readable domain names into IP addresses required for network communication
