@@ -105,15 +105,20 @@
  - ### Diagnosis
    - Ran ipconfig /all to verify network configuration
    - Identified that the client machine was using an external DNS server (8.8.8.8)
-   - Confirmed that the incorrect DNS server was preventing resolution of internal domain records
+   - Since external DNS servers do not contain records for internal domains (such as greyskull.local), the hostname could not be resolved.
  - ### Resolution
     - Updated the client machine’s DNS settings to point to the domain controller (10.0.0.7)
     - Cleared the DNS cache using ipconfig /flushdns
 ## Outcome 
 #### Re-ran nslookup and confirmed successful resolution and The hostname correctly resolved to the internal IP address.
+#### This issue demonstrated the importance of correct DNS server configuration on client systems when resolving internal domain resources.
 
+#### Client incorrectly configured to use external DNS server
 <img src="images/ipconfig-all.png" width="600"/>
+
 <img src="images/flushdns.png" width="600"/>
+
+#### DNS server corrected to domain controller
 <img src="images/displaydns.png" width="600"/>
 
 ---
