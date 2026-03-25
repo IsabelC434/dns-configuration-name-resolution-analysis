@@ -50,38 +50,49 @@
 #### Accessed DNS Manager on the domain controller (DC-1) and reviewed A-Records within the forward lookup zone.
   - Verified hostname to IP mappings for domain resources
   - Observed how internal systems are registered in the DNS
+<img src="images/Inspecting-DNS-Records.png" width="600"/>
 
 ---
 
 ## 🔹Creating and Testing A-Records
 #### Created a custom A-Record and mapped it to a specific IP address
-
 ### On the client machine:
   - Used nslookup to confirm name resolution
   - Used ping to verify connectivity
 ### Result: Successfully validated that the DNS server resolved the new hostname to the correct IP address.
+
+<img src="images/Castle-A-Record-Created.png" width="600"/>
+<img src="images/castle-ping.png" width="600"/>
+<img src="images/nslookup-castle.png" width="600"/>
+
+
 ---
 ## 🔹Deleting Records and Analyzing DNS Cache
 #### Deleted the A-Record from the DNS Server
-
 ### On the client machine:
   - The hostname still resolved due to the cached DNS entries
   - Ran ipconfig /displaydns to confirm cached record
   - Cleared cache using ipconfig /flushdns
   - Re-tested resolution using nslookup
 ### Result: After clearing the cache, the hostname no longer resolved, demonstrating the impact of DNS caching.
+
+<img src="images/still-found.png" width="600"/>
+<img src="images/flushdns.png" width="600"/>
+<img src="images/cant-find-castle.png" width="600"/>
+
 ---
 ## 🔹Creating and Testing CNAME Records 
 #### Configured a CNAME record to map an alias to an existing hostname
   - Queried the alias using nslookup
   - Verified that it resolved to the correct target
-### Result: Confirmed proper alias functionality and understanding the indirect name resolution.
----
-## 🔹Testing External DNS Resolution
+#### Result: Confirmed proper alias functionality and understanding the indirect name resolution.
+## Testing External DNS Resolution
 #### Performed DNS queries for external domains (i.e., google.com)
   - Observed that the local DNS server resolved the external names
   - Understood that this occurs through root hints and external DNS servers
-### Result: Demonstrated how internal DNS servers interact with global DNS infrastructure.
+#### Result: Demonstrated how internal DNS servers interact with global DNS infrastructure.
+<img src="images/alias-found.png" width="500"/>
+<img src="images/eternia-ping.png" width="500"/> 
 
 ---
 ## 🔹Troubleshooting Scenario
@@ -97,13 +108,11 @@
    - Checked the client DNS cache using:
      - ipconfig /displaydns
    - Identified that the client was still using a cached DNS entry
-  
  - ### Resolution
     - Cleared the DNS cache on the client machine with ipconfig /flushdns and re-ran nslookup <hostname> 
 ## Outcome 
 #### The hostname was resolved correctly after clearing the DNS cache.
 #### This demonstrated how DNS caching can impact name resolution and highlighted the importance of validating results from the client side when troubleshooting DNS related issues.
-
 
 ---
 ## 🔹Key Takeaways
