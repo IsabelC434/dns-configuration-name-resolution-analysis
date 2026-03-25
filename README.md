@@ -62,8 +62,8 @@
 ### Result: Successfully validated that the DNS server resolved the new hostname to the correct IP address.
 
 <img src="images/Castle-A-Record-Created.png" width="600"/>
+
 <img src="images/castle-ping.png" width="600"/>
-<img src="images/nslookup-castle.png" width="600"/>
 
 
 ---
@@ -78,7 +78,7 @@
 
 <img src="images/still-found.png" width="600"/>
 <img src="images/flushdns.png" width="600"/>
-<img src="images/cant-find-castle.png" width="600"/>
+<img src="images/flushdns2.png" width="600"/>
 
 ---
 ## 🔹Creating and Testing CNAME Records 
@@ -91,28 +91,30 @@
   - Observed that the local DNS server resolved the external names
   - Understood that this occurs through root hints and external DNS servers
 #### Result: Demonstrated how internal DNS servers interact with global DNS infrastructure.
+<img src="images/eternia-alias.png" width="600"
 <img src="images/alias-found.png" width="500"/>
 <img src="images/eternia-ping.png" width="500"/> 
 
 ---
 ## 🔹Troubleshooting Scenario
 ### Issue
-#### A newly created DNS A-Record was not resolving on the client machine
+#### The client machine was unable to resolve the internal hostname castle.greyskull.local.
  - ### Symptoms
-   - nslookup returned an error or incorrect result
-   - ping failed to resolve the hostname
-   - DNS record appeared correctly configured on a server
+   - nslookup returned a “Non existent domain” error
+   - DNS server was shown as 8.8.8.8 instead of the domain controller
  - ### Diagnosis
-   - Verified the A-Record existed in the DNS Manager on the domain controller
-   - Confirmed the client was using the correct DNS server
-   - Checked the client DNS cache using:
-     - ipconfig /displaydns
-   - Identified that the client was still using a cached DNS entry
+   - Ran ipconfig /all to verify network configuration
+   - Identified that the client machine was using an external DNS server (8.8.8.8)
+   - Confirmed that the incorrect DNS server was preventing resolution of internal domain records
  - ### Resolution
-    - Cleared the DNS cache on the client machine with ipconfig /flushdns and re-ran nslookup <hostname> 
+    - Updated the client machine’s DNS settings to point to the domain controller (10.0.0.7)
+    - Cleared the DNS cache using ipconfig /flushdns
 ## Outcome 
-#### The hostname was resolved correctly after clearing the DNS cache.
-#### This demonstrated how DNS caching can impact name resolution and highlighted the importance of validating results from the client side when troubleshooting DNS related issues.
+#### Re-ran nslookup and confirmed successful resolution and The hostname correctly resolved to the internal IP address.
+
+<img src="images/ipconfig-all.png" width="600"/>
+<img src="images/flushdns.png" width="600"/>
+<img src="images/displaydns.png" width="600"/>
 
 ---
 ## 🔹Key Takeaways
